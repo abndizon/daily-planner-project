@@ -5,5 +5,5 @@ export interface Item {
     date: string
     start_time: string
     end_time: string
-    reminder: string
+    reminder?: string
 }

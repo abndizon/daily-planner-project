@@ -21,8 +21,7 @@ export class AddFormComponent {
     category_id: 1,
     date: this.itemDateService.getDateToday(),
     start_time: "1:00 PM",
-    end_time: "1:30 PM",
-    reminder: ""
+    end_time: "1:30 PM"
   }
 
   @Input() categories: Category[] = [

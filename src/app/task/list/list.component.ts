@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Item } from 'src/app/models/item';
 import { ItemDateServiceService } from 'src/app/services/item-date.service';
+import { TodoItemsService } from 'src/app/services/todo-items.service';
 
 @Component({
   selector: 'task-list',
@@ -8,7 +9,7 @@ import { ItemDateServiceService } from 'src/app/services/item-date.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  constructor(private itemDateService: ItemDateServiceService) {
+  constructor(private itemDateService: ItemDateServiceService, private todoItemsService: TodoItemsService) {
   }
 
   @Input() items: Item[] = [];

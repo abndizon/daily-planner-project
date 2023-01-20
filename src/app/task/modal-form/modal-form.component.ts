@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ModalFormComponent {
 
-
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
 }

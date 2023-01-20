@@ -29,4 +29,11 @@ export class TodoItemsService {
   deleteItem(item: Item): Observable<Item> {
     return this.http.delete<Item>(`${this.baseUrl}/tasks/${item.id}`);
   }
+
+  getItemById = (id: number) : Observable<Item> => {
+    let item: Observable<Item>
+
+    item = this.http.get<Item>(`${this.baseUrl}/tasks/${id}`, httpOptions)
+    return item;
+  }
 }

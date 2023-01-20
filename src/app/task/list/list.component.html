@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h4>
+      Tasks for today
+    </h4>
+  
+    <div *ngIf="items.length == 0">
+      <h6>
+        No tasks for today
+      </h6>
+    </div>
+  
+    <div *ngIf="items.length > 0">
+      <div *ngFor="let item of items">
+        <div *ngIf="item.date == getDateToday()">
+          <list-items [item]="item" (deleteEvent)="deleteEventHandler($event)"></list-items>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

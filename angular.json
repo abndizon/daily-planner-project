@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "voting-system-webapp": {
+    "task-scheduler-webapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/voting-system-webapp",
+            "outputPath": "dist/task-scheduler-webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "voting-system-webapp:build:production"
+              "browserTarget": "task-scheduler-webapp:build:production"
             },
             "development": {
-              "browserTarget": "voting-system-webapp:build:development"
+              "browserTarget": "task-scheduler-webapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "voting-system-webapp:build"
+            "browserTarget": "task-scheduler-webapp:build"
           }
         },
         "test": {
